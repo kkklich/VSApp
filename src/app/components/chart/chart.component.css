@@ -1,0 +1,37 @@
+ #chart-wrapper {
+     display: inline-block;
+     position: relative;
+     width: 100%;
+ }
+
+ mat-icon {
+     cursor: pointer;
+ }
+
+ mat-form-field {
+     padding-right: 20px;
+     width: 220px !important;
+ }
+
+ .indicators-container {
+     display: flex;
+     flex-wrap: wrap;
+
+     .indicators {
+         mat-form-field.example-form-field {
+             display: flex;
+             align-items: flex-end;
+         }
+
+         mat-form-field.example-form-field mat-icon {
+             position: absolute;
+             top: 0;
+             right: -15px;
+         }
+
+         .indicators-select {
+             width: 100%;
+             position: relative
+         }
+     }
+ }

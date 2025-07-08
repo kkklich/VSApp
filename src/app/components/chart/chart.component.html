@@ -1,0 +1,42 @@
+<div id="chart-wrapper">
+    <div class="select-container" *ngIf="chart">
+        <div class="dropdown-container">
+
+            <mat-form-field>
+                <mat-label>Wybierz czas notowań: </mat-label>
+                <mat-select [(ngModel)]="quantityOfStockValue" (selectionChange)="changeDateChart()">
+                    <mat-option *ngFor="let time of timeStock" [value]="time.numberOfDays">{{time.time}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Wskaźniki </mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let indicator of indicatorArray" (click)="addIndicatorToChart(indicator)">
+                        {{ indicator }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <div class="indicators-container">
+                <div *ngFor="let lineChart of linesArray; let i = index" class="indicators">
+                    <div class="list">
+                        <mat-form-field class="example-form-field indicators-select">
+                            <mat-label>Długość {{lineChart.name}} {{i}}</mat-label>
+                            <input matInput type="number" min="1" [(ngModel)]="lineChart.length"
+                                (change)="updateChart(lineChart)">
+                            <mat-icon class="close-icon" (click)="removeIndicatorFromChart(lineChart)">close</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="chart"></canvas>
+    <div *ngIf="trend">
+        <mat-label>Na wykresie jest widoczny trend: {{trend}}</mat-label>
+    </div>
+    <div *ngIf="trendAverage">
+        <mat-label>{{trendAverage}}</mat-label>
+    </div>
+</div>
