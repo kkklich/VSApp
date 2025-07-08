@@ -39,6 +39,9 @@ import { App } from './app';
         ApiHttpService,
         ChartService,
         TwelveApiService
+    ],
+    exports: [
+        MainPageComponent
     ]
 })
 export class AppModule { }
