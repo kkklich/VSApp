@@ -14,11 +14,10 @@ import { ApiHttpService } from './Services/api-http.service';
 import { ChartService } from './Services/chart.service';
 import { TwelveApiService } from './Services/twelve-api.service';
 import { MainPageComponent } from './components/main-page/main-page';
-import { App } from './app';
 
 @NgModule({
     declarations: [
-        MainPageComponent,
+        // MainPageComponent,
         ChartComponent
     ],
     imports: [
@@ -30,8 +29,7 @@ import { App } from './app';
         MatIconModule,
         MatFormFieldModule,
         MatIconModule,
-        MatInputModule,
-
+        MatInputModule
     ],
     providers: [
         LoadCSVService,
@@ -39,9 +37,6 @@ import { App } from './app';
         ApiHttpService,
         ChartService,
         TwelveApiService
-    ],
-    exports: [
-        MainPageComponent
     ]
 })
 export class AppModule { }

@@ -9,13 +9,9 @@ import { ChartComponent } from "../chart/chart.component";
 
 @Component({
   selector: 'app-main-page',
-  // imports: [MatFormFieldModule,
-  //   MatInputModule,
-  //   MatButtonModule,
-  //   FormsModule, ChartComponent],
   templateUrl: './main-page.html',
-  styleUrl: './main-page.scss',
-  standalone: false,
+  styleUrls: ['./main-page.scss'],
+  standalone: true
 })
 export class MainPageComponent {
   public records: stockData[] = [];
@@ -23,13 +19,13 @@ export class MainPageComponent {
   public textCompany: string = "";
 
 
-  constructor(private readonly twelveApiService: TwelveApiService
+  constructor(
   ) {
   }
 
 
   public changeCompany() {
-    this.twelveApiService.getAPICompanyRequest(this.textCompany);
+    // this.twelveApiService.getAPICompanyRequest(this.textCompany);
   }
 
 }

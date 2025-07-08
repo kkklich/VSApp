@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { MainPageComponent } from "./components/main-page/main-page";
-import { AppModule } from './app.module';
+import { MainPageComponent } from './components/main-page/main-page';
 
 @Component({
   selector: 'app-root',
-  imports: [AppModule],
-  templateUrl: './app.html'
+  templateUrl: './app.html',
+  imports: [MainPageComponent],
+  // standalone: false
 })
 export class App {
   protected title = 'VSApp';
