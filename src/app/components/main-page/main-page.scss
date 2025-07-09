@@ -8,9 +8,12 @@
 }
 
 .main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #b41313;
     padding: 20px;
-    background-color: #d82323;
-    border-radius: 8px;
-    width: 200px;
-    height: 200px;
+    width: 100px;
 }

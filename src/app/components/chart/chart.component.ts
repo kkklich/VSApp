@@ -7,12 +7,6 @@ import { LoadCSVService } from '../../Services/load-csv.service';
 import { PatternService } from '../../Services/pattern.service';
 import { ChartService } from '../../Services/chart.service';
 import { ApiHttpService } from '../../Services/api-http.service';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
-import { MatOptionModule } from '@angular/material/core';
-import { MatIconModule } from '@angular/material/icon';
-import { NgFor, NgIf } from '@angular/common';
 
 
 @Component({
