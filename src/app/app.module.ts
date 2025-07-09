@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MainPageComponent } from './components/main-page/main-page';
 import { AppComponent } from './app.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -23,12 +26,15 @@ import { AppComponent } from './app.component';
     imports: [
         BrowserModule,
         HttpClientModule,
-        MatIconModule
+        MatIconModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        FormsModule
     ],
     providers: [
         LoadCSVService,
         PatternService,
-        // ApiHttpService,
+        ApiHttpService,
         ChartService,
         TwelveApiService
     ]
