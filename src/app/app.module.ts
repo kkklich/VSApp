@@ -13,12 +13,15 @@ import { AppComponent } from './app.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { CandleStickChartComponent } from './components/candle-stick-chart/candle-stick-chart.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
     declarations: [
         AppComponent,
         MainPageComponent,
-        ChartComponent
+        ChartComponent,
+        CandleStickChartComponent
     ],
     exports: [
         MainPageComponent
@@ -30,7 +33,8 @@ import { FormsModule } from '@angular/forms';
         MatIconModule,
         MatFormFieldModule,
         MatSelectModule,
-        FormsModule
+        FormsModule,
+        NgApexchartsModule
     ],
     providers: [
         LoadCSVService,

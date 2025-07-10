@@ -29,7 +29,7 @@ export class ChartComponent implements OnInit {
   public lengthChartSMA: number = 10;
 
   public linesArray: chartIndicatorModel[] = [];
-  private loadedStockData: stockData[] = [];
+  public loadedStockData: stockData[] = [];
   public indicatorArray: string[] = Object.keys(Indicators).map(key => Indicators[key as keyof typeof Indicators]);
   public selectedIndicator: string = '';
   public trend: string = '';
