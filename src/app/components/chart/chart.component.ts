@@ -8,18 +8,8 @@ import { PatternService } from '../../Services/pattern.service';
 import { ChartService } from '../../Services/chart.service';
 import { ApiHttpService } from '../../Services/api-http.service';
 
-
 @Component({
   selector: 'app-chart',
-  // imports: [
-  //   NgIf,
-  //   NgFor,
-  //   MatFormFieldModule,
-  //   MatSelectModule,
-  //   MatOptionModule,
-  //   FormsModule,
-  //   MatIconModule
-  // ],
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css'],
   standalone: false
@@ -240,6 +230,9 @@ export class ChartComponent implements OnInit {
   }
 
   private calculateIndicators() {
+    if (this.linesArray.length === 0)
+      return;
+
     const line = this.chart.data.datasets.find((x: any) => x.id === this.linesArray[0].id)
     if (line === undefined)
       return;

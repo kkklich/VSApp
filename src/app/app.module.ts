@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
     declarations: [
         AppComponent,
-        MainPageComponent
+        MainPageComponent,
+        ChartComponent
     ],
     exports: [
         MainPageComponent
